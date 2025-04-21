@@ -1,0 +1,33 @@
+Project Studybud
+
+Initials
+1. create env and activate
+2. install django
+3. start project Studybud
+4. create app base
+
+base app
+1. add base app in setting.py of Studybud
+2. add templates folder in root folder and define home and room templates
+3. add templtes folder inside templates DIR array in settings.py 
+4. define main.html, navbar.html and wrap other html files from main.html
+5. add relocate home.html and room.html to inside base app base-app->templates->base folder
+6. refactor code in home.html to manage rooms and url dynamically(using params)
+
+DB setup
+1. migrate default setting for DB (py manage.py migrate)
+2. base->model.py define a py class for Room model
+3. makemigrations to create Room table and migrate to apply it
+4. create admin user (py manage.py createsuperuser)
+5. base->admin add Room table admin pannel
+6. add some rooms from admin pannel
+7. to render romm data from db add room model to base->views.py
+8. base->models add topic model above room 
+9. base->models add message model under room 
+10. makemigrations and migrate
+11. base->admin register Topic, Message to admin 
+12. base->templates->base->home.html render room host and topic 
+
+CRUD
+1. base->base->templates->base create room_form.html and take room info
+2. base->forms.py to manage room-form model

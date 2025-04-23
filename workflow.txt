@@ -45,3 +45,10 @@ Authentication
 8. base->view define registerPage function
 9. add condition on visibility of room edit/delete button and also show username on top
 
+Room Message
+1. base->templates->base->room.html show all messages using for loop
+2. add a form to take message from participants
+3. create many2many relation in models.py for participants field 
+4. makemigrations and migrate changes
+5. base->views get all participants in room function and add them after posting a message
+6. base->templates->base->room.html show all participants

@@ -31,3 +31,17 @@ DB setup
 CRUD
 1. base->base->templates->base create room_form.html and take room info
 2. base->forms.py to manage room-form model
+3. add searchbar in homepage and handle search
+
+Authentication
+1. base->templates->base->login_register.html to take login info
+2. define loginpage, logoutuser in base->views.py
+3. add urls to base->urls.py
+4. add login, logout option to navbar, also add message to main.html
+5. add login_required decorator to restrict users from using certain features
+   without logging in.
+6. add registration form to base->templates->base->login_register.html
+7. set condition of rendering login/register form
+8. base->view define registerPage function
+9. add condition on visibility of room edit/delete button and also show username on top
+

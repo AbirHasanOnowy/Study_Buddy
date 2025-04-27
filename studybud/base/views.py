@@ -62,11 +62,9 @@ def home(request):
     room_messages = room_messages[:5]
 
 
-    context = { 'rooms': rooms, 'topics': topics,
+    context = { 'rooms': rooms, 'topics': topics[0:5], 'topic_count': topics.count(),
       'room_messages': room_messages, 'room_count': room_count}
     return render(request, 'base/home.html', context)
-
-
 
 def room(request, pk):
     room = Room.objects.get(id=pk)
@@ -85,7 +83,6 @@ def room(request, pk):
     context = {'room': room, 'room_messages': room_messages, 'participants': participants}        
     return render(request, 'base/room.html', context)
 
-
 def userProfile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
@@ -93,7 +90,6 @@ def userProfile(request, pk):
     topics = Topic.objects.all()
     context = {'user': user, 'rooms': rooms, 'room_messages': room_messages, 'topics': topics}
     return render(request, 'base/profile.html', context)
-
 
 @login_required(login_url='login')
 def createRoom(request):
@@ -111,8 +107,6 @@ def createRoom(request):
         return redirect('home')
     context = {'form': form, 'topics': topics}
     return render(request, 'base/room_form.html', context)
-
-
 
 @login_required(login_url='login')
 def updateRoom(request, pk):
@@ -134,8 +128,6 @@ def updateRoom(request, pk):
     context = {'form': form, 'topics': topics, 'room': room}
     return render(request, 'base/room_form.html', context)
 
-
-
 @login_required(login_url='login')
 def deleteRoom(request, pk):
     room = Room.objects.get(id=pk)
@@ -148,7 +140,6 @@ def deleteRoom(request, pk):
         return redirect('home')
     context = {'obj': room}
     return render(request, 'base/delete.html', context)
-
 
 @login_required(login_url='login')
 def deleteMessage(request, pk):
@@ -177,4 +168,13 @@ def updateUser(request):
     context = {'form': form}
     return render(request, 'base/update_user.html', context)
 
-    
+def topicsPage(request):
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    topics = Topic.objects.filter(name__icontains=q)
+    context = {'topics': topics}
+    return render(request, 'base/topics.html', context)
+
+def activityPage(request):
+    room_messages = Message.objects.all()
+    context = {'room_messages': room_messages}
+    return render(request, 'base/activity.html', context)

@@ -252,10 +252,9 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 800px) {
   .mobile-menu {
     display: none;
   }
@@ -463,7 +462,7 @@ a {
   margin: 3rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
   .activities,
   .topics {
     display: none;
@@ -608,7 +607,7 @@ a {
   display: block;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .mobile-menu .header__search {
     display: block;
     margin-bottom: 2.4rem;

@@ -69,4 +69,14 @@ Static files
 3. stiles->main.css to style main page
 
 Theme Installation(free pre-built)
-1. Download theme from git repo and replace necessary files
+1. Download theme from git repo and replace necessary files with frontent designed files
+
+Mobile Responsive Pages
+1. add topics and activity page for mobile users to let them see those in a new page
+
+REST Framework
+1. base->api new folder with 4 python files.
+2. install django rest framework (pip install djangorestframework)
+3. add 'rest_framework' in INSTALLED_APPS in settings.py
+4. install django-cors (pip install django-cors-headers)
+5. add cors middleware in settings.py

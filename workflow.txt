@@ -51,4 +51,22 @@ Room Message
 3. create many2many relation in models.py for participants field 
 4. makemigrations and migrate changes
 5. base->views get all participants in room function and add them after posting a message
-6. base->templates->base->room.html show all participants
+6. base->templates->base->room.html add recent activity by including activity_components
+
+Components
+1. base->templates->base->activity_components.html to show recent activity (new messages)
+2. base->templates->base->topic_components.html to show all topics
+3. base->templates->base->feed_components.html to show all rooms
+
+User Profile
+1. base->templates->base->profile.html add all topics section, 
+   user rooms section, user activity section
+2. make all usernames clickable and link to user profile
+
+Static files
+1. in root create a file that contains all the necessary css files. Name it static
+2. add styles, image, js folder in it
+3. stiles->main.css to style main page
+
+Theme Installation(free pre-built)
+1. Download theme from git repo and replace necessary files

@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'corsheaders',  # CORS headers
 ]
 
+AUTH_USER_MODEL = 'base.User'  # Custom user model
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # CORS middleware
     'django.middleware.security.SecurityMiddleware',
@@ -122,9 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/images/'  # URL prefix for media files
 STATICFILES_DIRS = [
     BASE_DIR / 'static',  # Add this line to include the static directory
 ]
+MEDIA_ROOT = BASE_DIR / 'static/images'  # Directory to store uploaded media files
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

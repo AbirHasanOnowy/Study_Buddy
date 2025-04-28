@@ -80,3 +80,34 @@ REST Framework
 3. add 'rest_framework' in INSTALLED_APPS in settings.py
 4. install django-cors (pip install django-cors-headers)
 5. add cors middleware in settings.py
+
+
+
+
+CUSTOM USER MODEL
+1. start a new project called 'customusermodel'
+2. create base app
+3. base->model.py intiate an Abstract user model
+4. add it to settings.py (AUTH_USER_MODEL)
+5. makemigrations and migrate new User model
+6. create new super user
+7. base->admin.py import user
+
+
+
+
+
+Modifying Study Buddy to use custom user model
+1. mode to study bud root folder
+2. stop the server if running
+3. delete sqlite database
+4. from base delete all migrations
+5. base->model.py commentout all models
+6. now define custom user model similarly we did just before
+7. install pillow to handle user image upload
+8. add avatar field to user model
+9. define image location to settings.py (MEDIA_ROOT, MEDIA_URL)
+10. Studybud->urls.py add image path url
+11. do makemigrations and migrate
+12. update the forms to take user images (profile update, registration)
+13. also change login form to take emails instead of username

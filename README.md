@@ -12,6 +12,14 @@ StudyBuddy is a Django-based web application designed to help users find study p
 
 ## Screenshots
 
+![SB Home Page](<SB Home Page.png>)
+![Study Room and Chats](<Study Room and Chats.png>)
+![All Topics Page](<All Topics Page.png>)
+![User Profile](<User Profile.png>)
+![SB Login Page](<SB Login Page.png>)
+![SB Registration Page](<SB Registration Page.png>)
+![Room Creation Form](<Room Creation Form.png>)
+
 ## Project Structure
 
 ```

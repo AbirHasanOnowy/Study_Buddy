@@ -111,3 +111,8 @@ Modifying Study Buddy to use custom user model
 11. do makemigrations and migrate
 12. update the forms to take user images (profile update, registration)
 13. also change login form to take emails instead of username
+
+
+// in settings.py Allowed hosts (ALLOWED_HOSTS) has been changed to .vercel.app for deployment
+// remove thr string value to use it in local machine
+// also in wsgi file new line app = application was added

@@ -113,6 +113,15 @@ Modifying Study Buddy to use custom user model
 13. also change login form to take emails instead of username
 
 
-// in settings.py Allowed hosts (ALLOWED_HOSTS) has been changed to .vercel.app for deployment
-// remove thr string value to use it in local machine
-// also in wsgi file new line app = application was added
+
+## Prep for uploading to Render.com
+
+Initials
+1. install whitenoise and update settings.py
+2. create collectstatic file
+
+Deployment Prep
+1. create requirements.txt
+2. install gunicorn
+3. change settings.py more like add ALLOWED_HOSTS and few more things
+4.  
